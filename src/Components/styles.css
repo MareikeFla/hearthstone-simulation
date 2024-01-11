@@ -1,0 +1,79 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Heading {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+.SelectedCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: max-content;
+  margin-bottom: 1.5rem;
+  min-height: 350px;
+}
+
+.SelectedCard {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 15px 5px #ffce00;
+}
+
+.SelectedCard--empty {
+  box-shadow: inset 0px 0px 15px 5px #c5c5c5;
+}
+
+.SelectedCard-Image {
+  max-width: 70%;
+}
+
+.SelectedCard--empty .SelectedCard-Image {
+  max-width: 65%;
+}
+
+.CardGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.Card {
+  width: 120px;
+  height: 160px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 15px 5px #cfcece;
+}
+
+.Card-Image {
+  max-width: 92%;
+}
+
+.Card-Image:hover {
+  max-width: 100%;
+}
+
+.Card--selected {
+  box-shadow: inset 0px 0px 15px 5px #ffce00;
+}
