@@ -6,7 +6,7 @@ export default function SelectedCards({ selectedCards, handleCardRemove }) {
     <div className="SelectedCardsGrid">
       {selectedCards.map((selectedCard, i) => {
         if (selectedCard) {
-          // const statistics = fightAll(selectedCard);
+          const statistics = fightAll(selectedCard);
           return (
             <div
               className="SelectedCard"
@@ -20,9 +20,17 @@ export default function SelectedCards({ selectedCards, handleCardRemove }) {
                 src={selectedCard.picture}
               ></img>
               <p>{selectedCard.name}</p>
-              {/* <p>win: {statistics.win}</p>
-              <p>loose: {statistics.loose}</p>
-              <p>draw: {statistics.draw}</p> */}
+              <p>
+                win: {statistics.filter((result) => result[0] === "win").length}
+              </p>
+              <p>
+                loose:{" "}
+                {statistics.filter((result) => result[0] === "loose").length}
+              </p>
+              <p>
+                draw:{" "}
+                {statistics.filter((result) => result[0] === "draw").length}
+              </p>
             </div>
           );
         }
