@@ -17,6 +17,12 @@ main {
   font-size: 2rem;
 }
 
+.Heading-Info {
+  margin-bottom: 1rem;
+  padding: 0 10rem;
+  text-align: center;
+}
+
 .SelectedCardsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -46,7 +52,7 @@ main {
 }
 
 .SelectedCard--empty .SelectedCard-Image {
-  max-width: 65%;
+  max-width: 70%;
 }
 
 .CardGrid {

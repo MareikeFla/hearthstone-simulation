@@ -28,7 +28,15 @@ export default function App() {
   return (
     <main>
       <h2 className="Heading">Select your cards</h2>
-
+      <p className="Heading-Info">
+        This app accurately simulates your first fight in Hearthstone
+        Battlegrounds, providing probabilities of winning, losing, or drawing
+        with each card you have chosen.
+      </p>
+      <p>
+        Select: Select a card by clicking on it in the overview of all cards.
+      </p>
+      <p>Deselect: Deselect a card by clicking on it in the selection.</p>
       <SelectedCards
         selectedCards={selectedCards}
         handleCardRemove={handleCardRemove}

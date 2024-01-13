@@ -36,7 +36,7 @@ export default function SelectedCards({ selectedCards, handleCardRemove }) {
         }
         return (
           <div className="SelectedCard SelectedCard--empty" key={i}>
-            <img src="/pics/empty.png" className="SelectedCard-Image"></img>
+            <img src="/pics/emptybg.png" className="SelectedCard-Image"></img>
             <p>Empty</p>
             <p>win: </p>
             <p>loose: </p>
