@@ -10,6 +10,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 3rem;
+  max-width: 1400px;
+}
+
+header {
+  padding: 0 3rem 0 3rem;
 }
 
 .Heading {
@@ -27,20 +33,19 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
-  max-width: max-content;
+  width: 100%;
   margin-bottom: 1.5rem;
   min-height: 350px;
 }
 
 .SelectedCard {
-  width: 240px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-content: center;
   align-items: center;
-  justify-content: center;
   border-radius: 10px;
   box-shadow: inset 0px 0px 15px 5px #ffce00;
+  padding: 1rem;
 }
 
 .SelectedCard--empty {
@@ -48,11 +53,12 @@ main {
 }
 
 .SelectedCard-Image {
-  max-width: 70%;
+  justify-self: left;
+  max-width: 45%;
 }
 
 .SelectedCard--empty .SelectedCard-Image {
-  max-width: 70%;
+  max-width: 45%;
 }
 
 .CardGrid {

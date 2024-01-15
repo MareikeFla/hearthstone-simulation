@@ -19,28 +19,33 @@ export default function SelectedCards({ selectedCards, handleCardRemove }) {
                 className="SelectedCard-Image"
                 src={selectedCard.picture}
               ></img>
-              <p>{selectedCard.name}</p>
-              <p>
-                win: {statistics.filter((result) => result[0] === "win").length}
-              </p>
-              <p>
-                loose:{" "}
-                {statistics.filter((result) => result[0] === "loose").length}
-              </p>
-              <p>
-                draw:{" "}
-                {statistics.filter((result) => result[0] === "draw").length}
-              </p>
+              <div>
+                <h2>{selectedCard.name}</h2>
+                <p>
+                  win:{" "}
+                  {statistics.filter((result) => result[0] === "win").length}
+                </p>
+                <p>
+                  loose:{" "}
+                  {statistics.filter((result) => result[0] === "loose").length}
+                </p>
+                <p>
+                  draw:{" "}
+                  {statistics.filter((result) => result[0] === "draw").length}
+                </p>
+              </div>
             </div>
           );
         }
         return (
           <div className="SelectedCard SelectedCard--empty" key={i}>
             <img src="/pics/emptybg.png" className="SelectedCard-Image"></img>
-            <p>Empty</p>
-            <p>win: </p>
-            <p>loose: </p>
-            <p>draw: </p>
+            <div>
+              <p>Empty</p>
+              <p>win: </p>
+              <p>loose: </p>
+              <p>draw: </p>
+            </div>
           </div>
         );
       })}
